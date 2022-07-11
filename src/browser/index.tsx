@@ -1,4 +1,5 @@
 // Load polyfills (once, on the top of our web app)
+
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 import { BrowserRouter } from "react-router-dom";

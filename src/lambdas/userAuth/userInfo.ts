@@ -1,6 +1,6 @@
 import {APIGatewayEvent} from "aws-lambda";
 const AWS = require('aws-sdk');
-    AWS.config.update({region: 'us-east-1'});
+    AWS.config.update({region: 'sa-east-1'});
 
     const client = new AWS.CognitoIdentityServiceProvider({apiVersion: '2016-04-18'});
     type headers = {

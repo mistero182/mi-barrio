@@ -1,9 +1,10 @@
 import {APIGatewayEvent } from "aws-lambda";
     const AWS = require('aws-sdk');
-    AWS.config.update({region: 'us-east-1'});
+    AWS.config.update({region: 'sa-east-1'});
 
     const client = new AWS.CognitoIdentityServiceProvider({apiVersion: '2016-04-18'});
-    const cognitoClientID = process.env.VINERESERVE_COGNITO_CLIENTID || '';
+
+    const cognitoClientID = process.env.APOBARRIOS_COGNITO_CLIENTID || '';
     if (!cognitoClientID) { throw new Error('env var required for cognitoClientID') };
 
     type headers = {
@@ -29,6 +30,7 @@ import {APIGatewayEvent } from "aws-lambda";
 
 export const handler = async (event: APIGatewayEvent ) => {
     console.log(1);
+    console.log(cognitoClientID);
     const headers =  {
         "Access-Control-Allow-Origin": event.headers.origin,
         "Content-Type": "application/json",

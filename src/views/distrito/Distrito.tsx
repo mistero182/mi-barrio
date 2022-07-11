@@ -1,6 +1,6 @@
 import React, {  } from 'react';
 import { Link } from 'react-router-dom';
-import backArrow from '../../assets/icons/backArrow.png'
+import backArrow from '../../assets/icons/left-arrow.png'
 import { useParams, useSearchParams} from "react-router-dom";
 
 import './Distrito.css'
@@ -25,7 +25,7 @@ export const Distrito = (() => {
     const { ndis } = useParams();
 
     return (
-        <div className='mainDistrito'>
+        <div className='distrito-main'>
             <div className='header'>
                 <Link to='/'>
                     <img 
@@ -52,8 +52,6 @@ export const Distrito = (() => {
                     </div>
                 </div>
             ))}
-            
-            
 
         </div>
     );

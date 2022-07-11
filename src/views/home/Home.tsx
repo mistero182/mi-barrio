@@ -12,23 +12,18 @@ import distritos from '../../data/distritos.json'
 export const Home = (() => {
     const loadedMainlogo = useProgressiveImage(mainIcon)
     const loadedGPS = useProgressiveImage(gpsPin)
+    const loadedUser = useProgressiveImage(user)
     
     return (
         <div className='Home'>
-            <h1
-                className='mainTitle'
-            >
-                {"MI SANTA CRUZ\n"}
-                <span
-                    className='subTitle'
-                >
+            <h1 className='mainTitle' >
+                    {"MI SANTA CRUZ\n"}
+                <span className='subTitle' >
                     Emprendedora
                 </span>
             </h1>
 
-            <div
-                className='mainLogoContainer'
-            >
+            <div className='mainLogoContainer'>
                 <img 
                     className='mainLogo'
                     src={ mainIcon }
@@ -37,23 +32,17 @@ export const Home = (() => {
 
             <div>
                 <Link to={`/negocio/apotv`}>
-                    <div
-                        className='sponsoreditem'
-                    >
+                    <div className='sponsoreditem'>
                         <p> APO tv </p>
                     </div>
                 </Link>
                 <Link to={`/negocio/revistamisantacruz`}>
-                    <div
-                        className='sponsoreditem'
-                    >
+                    <div className='sponsoreditem'>
                         <p> Revista Mi Santa Cruz </p>
                     </div>
                 </Link>
                 <Link to={`/negocio/josedazabienesraices`}>
-                    <div
-                        className='sponsoreditem'
-                    >
+                    <div className='sponsoreditem'>
                         <p> Jose Daza Bienes Raices </p>
                     </div>
                 </Link>
@@ -87,16 +76,18 @@ export const Home = (() => {
                 </div>
             </div>
 
-            <a href='https://auth.apo.ocuba.net/login?client_id=3gb76npoh1pgv2o269524t7jlm&response_type=code&scope=email+openid&redirect_uri=https%3A%2F%2Fapo.ocuba.net'>
+            <Link className='currentDistritoContainer' to='/login'>
+            {/* <a href='https://auth.apo.ocuba.net/login?client_id=3gb76npoh1pgv2o269524t7jlm&response_type=code&scope=email+openid&redirect_uri=https%3A%2F%2Fapo.ocuba.net'> */}
                 <div
                     className='userButton'
                 >
                     <img
-                        src={user}
+                        src={loadedUser}
                         className='userIcon'
                     />
                 </div>
-            </a>
+            {/* </a> */}
+            </Link>
 
             
         </div>

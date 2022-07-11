@@ -1,8 +1,10 @@
 import {Context, CognitoUserPoolTriggerEvent} from "aws-lambda";
     const AWS = require('aws-sdk');
+    AWS.config.update({region: 'sa-east-1'});
+
     const dynamoClient = new AWS.DynamoDB.DocumentClient();
 
-    const usersDB = process.env.VINERESERVE_DB_USERS || '';
+    const usersDB = process.env.APOBARRIOS_DB_USERS || '';
     if (!usersDB) { throw new Error('env var required for useresDB') } 
 
 

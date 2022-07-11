@@ -1,3 +1,11 @@
+.distrito-main {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+
 .header {
     display: flex;
     flex-flow: row nowrap;
@@ -5,21 +13,21 @@
     height: 60px;
     max-height: 150px;
     width: 100%;
-    background-image: linear-gradient(to right, rgba(116, 160, 89, 1) 0%,  rgba(116, 160, 89,0.5) 100%);
+    background-image: linear-gradient(to right, #00B881 0%, #1EFFBC 70%,  #ADFFE7 100%);
     background-repeat: no-repeat;
 }
 
 .backArrow {
-    width: 20%;
     height: 33px;
-    width: 22px;
     margin-left: 15px;
 }
 
 .headerTitle {
-    font-family: 'sen-regular';
+    font-family: 'asapregular';
+    color: #20494F;
+    color: #ffffff;
     font-weight: 800;
-    font-size: 22px;
+    font-size: 25px;
     width: 80%;
 }
 

@@ -1,13 +1,13 @@
-@font-face {
+/* @font-face {
     font-family: 'trade-gothic';
     src: url('../../assets/fonts/Trade Gothic LT Bold Condensed No. 20.ttf');
-}
+} */
 
-@font-face {
+/* @font-face {
     font-family: 'montserrat-regular';
-    src: url('../../assets/fonts/Montserrat-Regular.ttf');
-}
-
+    src: url('../../assets/fonts/Trade Gothic LT Bold Condensed No. 20.ttf');
+} */
+/* 
 @font-face {
     font-family: 'sen-regular';
     src: url('../../assets/fonts/Sen-Regular.ttf');
@@ -16,4 +16,16 @@
 @font-face {
     font-family: 'montserrat-italic';
     src: url('../../assets/fonts/Montserrat-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'Asap-VariableFont_wght';
+    src: url('../../assets/fonts/Asap/Asap-VariableFont_wght.ttf');
+} */
+
+
+@font-face {
+    font-family: 'montserrat-italic';
+    /* src: url('../../assets/fonts/Montserrat-Italic.ttf')  format('ttf'); */
+    src: local('montserrat-italic'), url(./fonts/Asap-Bold.ttf) format('truetype');
 }

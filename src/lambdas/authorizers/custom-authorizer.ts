@@ -6,12 +6,12 @@ const jwkToPem = require('jwk-to-pem');
 
 const verifyPromised = promisify(jsonwebtoken.verify.bind(jsonwebtoken));
 
-    const cognitoPoolId = process.env.COGNITO_POOL_ID || '';
+    const cognitoPoolId = process.env.APOBARRIOS_COGNITO_POOL_ID || '';
     if (!cognitoPoolId) {
       throw new Error('env var required for cognito pool');
     }
 
-    const cognitoIssuer = `https://cognito-idp.us-east-1.amazonaws.com/${cognitoPoolId}`;
+    const cognitoIssuer = `https://cognito-idp.sa-east-1.amazonaws.com/${cognitoPoolId}`;
     let cacheKeys;
     
     const getPublicKeys = async () => {

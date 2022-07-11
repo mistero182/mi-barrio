@@ -1,13 +1,14 @@
 import {APIGatewayEvent} from "aws-lambda";
     const AWS = require('aws-sdk');
-    AWS.config.update({region: 'us-east-1'});
+    AWS.config.update({region: 'sa-east-1'});
 
     const dynamoClient = new AWS.DynamoDB.DocumentClient();
     const cognitoClient = new AWS.CognitoIdentityServiceProvider({apiVersion: '2016-04-18'});
 
-    const sessionsDB = process.env.VINERESERVE_DB_SESSIONS || '';
-    const cognitoClientID = process.env.VINERESERVE_COGNITO_CLIENTID || '';
-    if (!sessionsDB) { throw new Error('env var required for sessionsDB') } 
+    const sessionsDB = process.env.APOBARRIOS_DB_SESSIONS || '';
+    if (!sessionsDB) { throw new Error('env var required for sessionsDB') };
+
+    const cognitoClientID = process.env.APOBARRIOS_COGNITO_CLIENTID || '';
     if (!cognitoClientID) { throw new Error('env var required for cognitoClientID') }
 
     type headers = {

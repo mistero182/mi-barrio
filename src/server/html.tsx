@@ -25,6 +25,9 @@ const html = ({
       <title>${config.app.TITLE}</title>
       <link rel="manifest" href="${config.app.PUBLIC_URL}/manifest.json" />
       <link rel="shortcut icon" href="${config.app.PUBLIC_URL}/favicon.ico" />
+
+      <link rel="stylesheet" href="${config.app.PUBLIC_URL}/font-family.css">
+
       ${stats.styles.map(filename => `<link rel="stylesheet" href="${config.app.DIST_URL}/${filename}" />`).join('\n')}
       <style id="jss-server-side">${css}</style>
       <script id="config-server-side">

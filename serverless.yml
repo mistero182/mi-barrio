@@ -26,6 +26,14 @@ provider:
     SERVERLESS_REGION: ${self:provider.region}
     SERVERLESS_STAGE: ${self:provider.stage}
 
+    APOBARRIOS_COGNITO_POOL_ID: sa-east-1_rTyVpT1Ss
+    APOBARRIOS_COGNITO_CLIENTID: 2d6ufrta31ahtospkfbchst27f
+
+    APOBARRIOS_DB_SESSIONS: mibarrio-sessions
+    APOBARRIOS_DB_USERS: mibarrio-users
+    APOBARRIOS_DB_NEGOCIOS: mibarrio-negocios
+    
+
     APP_DIST_URL: ${self:custom.distBucketUrl.${self:provider.region}, self:custom.distBucketUrl.default}
     APP_PUBLIC_URL: ${self:custom.distBucketUrl.${self:provider.region}, self:custom.distBucketUrl.default}
     APIGATEWAY_URL:

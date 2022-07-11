@@ -1,3 +1,7 @@
+.hidden {
+    display: none !important;
+}
+
 .login-main {
     background-image: linear-gradient(to bottom right, #1EFFBC, #20494F);
     position: absolute;
@@ -14,6 +18,22 @@
     position: absolute;
     right: 20px;
     top: 20px;
+}
+
+.signup-messageHeader {
+    font-family: 'latobold';
+    color: #20494F;
+    font-size:  15px;
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+.signup-messageError {
+    font-family: 'latoregular';
+    color: red;
+    font-size:  15px;
+    margin-top: 25px;
+    margin-bottom: 0px;
 }
 
 .login-formContainer {

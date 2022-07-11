@@ -1,34 +1,29 @@
-import "./App.css";
+import React from 'react';
+import './App.css';
 
-import * as React from "react";
-import {BrowserRouter, Route, Routes, useLocation} from "react-router-dom";
-
-
+import { Route, Routes } from "react-router-dom";
 import { Home } from './views/home/Home';
-import useConfig from "./hooks/useConfig";
-import logo from "./logo.svg";
+import { Distrito } from './views/distrito/Distrito'
+import { Negocio } from './views/negocio/Negocio'
+import { Login } from './views/login/Login'
+import { SignUp } from './views/signup/SignUp'
 
-/**
- * Our Web Application
- */
-export default function App() {
+import useConfig from "./hooks/useConfig";
+
+function App() {
   const config = useConfig();
+
   return (
-    // <div>
-    
-    //     <header className="App-header">
-    //       <img src={logo} className="App-logo" alt="logo" />
-    //       <h1 className="App-title">Welcome to {config.app.TITLE}</h1>
-    //     </header>
-    //     <p className="App-intro">
-    //       To get started, edit <code>src/App.tsx</code> and save to reload.
-    //     </p>
-    //   </div>
     <div className="App">
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </div>
-    
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/registrarse" element={<SignUp />} />
+      <Route path="/distrito/:ndis" element={<Distrito />} />
+      <Route path="/negocio/:id" element={<Negocio />} />
+    </Routes>
+  </div>
   );
 }
+
+export default App;
